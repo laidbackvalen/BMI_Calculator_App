@@ -1,110 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".fragments.AddValuesFragment">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/backToSelectGenderImage"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/baseline_arrow_back_ios_24"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/bmiTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/hind_vadodara_medium"
-        android:text="BMI"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#ffb534"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/calcText"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/calcText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/hind_vadodara_medium"
-        android:text="Calculator"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#65b741"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/bmiTxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bmiTxt"
-        app:layout_constraintTop_toTopOf="@+id/bmiTxt" />
-
-    <TextView
-        android:id="@+id/chooseGenderTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/hind_vadodara_medium"
-        android:text="Please Modify the values"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/calcText"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="@+id/bmiTxt"
-        app:layout_constraintTop_toBottomOf="@+id/calcText" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Measuring Unit"
-        android:textColorHint="@color/black"
-        app:boxStrokeColor="@color/black"
-        app:endIconTint="@color/black"
-        app:expandedHintEnabled="true"
-        app:hintEnabled="true"
-        app:hintTextColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/chooseGenderTxt">
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:inputType="none"
-            android:popupBackground="@color/white"
-            android:text="Kgs/Cms"
-            android:textColor="@color/black" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
+<!--        android:layout_marginTop="102dp"-->
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:elevation="10dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="102dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/view_female_background_corner_radius"
         app:layout_constraintEnd_toStartOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chooseGenderTxt" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/weightResultTextView"
@@ -234,80 +148,145 @@
         app:layout_constraintStart_toEndOf="@+id/removeAgeimageView"
         app:layout_constraintTop_toBottomOf="@+id/weightCountTextAddValues" />
 
+
     <View
-        android:id="@+id/view3"
+        android:id="@+id/viewFeet"
         android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_height="200dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/view_female_background_corner_radius"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
-        android:id="@+id/heightTextView"
+        android:id="@+id/feetTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
+        android:text="Height (ft)"
         android:elevation="10dp"
-        android:text="Height (cm)"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+        app:layout_constraintEnd_toEndOf="@+id/viewFeet"
+        app:layout_constraintStart_toStartOf="@+id/viewFeet"
+        app:layout_constraintTop_toTopOf="@+id/viewFeet" />
 
     <EditText
-        android:id="@+id/heightCountTextView"
-        android:layout_width="120dp"
+        android:id="@+id/feetCountTextAddValues"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="phone"
+        android:inputType="phone"
         android:minWidth="30dp"
-        android:text="170"
+        android:maxLength="3"
         android:gravity="center"
-        android:maxLength="6"
         android:background="#00000000"
+        android:elevation="10dp"
+        android:text="65"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/heightTextView"
-        app:layout_constraintStart_toStartOf="@+id/heightTextView"
-        app:layout_constraintTop_toBottomOf="@+id/heightTextView" />
+        app:layout_constraintEnd_toEndOf="@+id/viewFeet"
+        app:layout_constraintStart_toStartOf="@+id/viewFeet"
+        app:layout_constraintTop_toBottomOf="@+id/feetTextView" />
 
-    <SeekBar
-        android:id="@+id/seekbarHeight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="24dp"
-        android:elevation="20dp"
-        android:max="300"
-        android:progress="170"
-        android:progressDrawable="@drawable/seekbar_style"
-        android:splitTrack="false"
-        android:thumb="@drawable/custom_thumb"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view3" />
+    <ImageView
+        android:id="@+id/removeFeetByOneImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:elevation="10dp"
+        android:background="@drawable/view_round_background_white"
+        android:src="@drawable/baseline_horizontal_rule_24"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFeet"
+        app:layout_constraintStart_toStartOf="@+id/viewFeet"
+        app:layout_constraintEnd_toStartOf="@id/addFeetByOneImage"
+        app:layout_constraintTop_toBottomOf="@+id/feetCountTextAddValues" />
 
-    <Button
-        android:id="@+id/calculateButton"
+    <ImageView
+        android:id="@+id/addFeetByOneImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:elevation="10dp"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFeet"
+        android:background="@drawable/view_round_background_white"
+        app:layout_constraintEnd_toEndOf="@+id/viewFeet"
+        app:layout_constraintStart_toEndOf="@+id/removeFeetByOneImage"
+        app:layout_constraintTop_toBottomOf="@+id/feetCountTextAddValues" />
+
+    <View
+        android:id="@+id/viewInches"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_height="200dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#65B741"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:fontFamily="@font/hind_vadodara_medium"
-        android:text="Calculate"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/view_female_background_corner_radius"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFeet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/viewFeet" />
 
+    <TextView
+        android:id="@+id/inchestextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:elevation="10dp"
+        android:text="Inches"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/viewFeet" />
+
+    <EditText
+        android:id="@+id/inchesCountTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="26"
+        android:gravity="center"
+        android:inputType="phone"
+        android:minWidth="30dp"
+        android:maxLength="3"
+        android:background="#00000000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/feetTextView" />
+
+    <ImageView
+        android:id="@+id/removeInchesimageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/view_round_background_white"
+        android:elevation="10dp"
+        android:padding="5dp"
+        android:src="@drawable/baseline_horizontal_rule_24"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFeet"
+        app:layout_constraintEnd_toStartOf="@+id/addInchesimageView"
+        app:layout_constraintStart_toStartOf="@+id/viewInches"
+        app:layout_constraintTop_toBottomOf="@+id/inchesCountTextView" />
+
+    <ImageView
+        android:id="@+id/addInchesimageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/view_round_background_white"
+        android:elevation="10dp"
+        android:padding="5dp"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFeet"
+        app:layout_constraintEnd_toEndOf="@+id/viewInches"
+        app:layout_constraintStart_toEndOf="@+id/removeInchesimageView"
+        app:layout_constraintTop_toBottomOf="@+id/inchesCountTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

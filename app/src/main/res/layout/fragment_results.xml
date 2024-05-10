@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/fragmentResult"
+    tools:context=".fragments.ResultsFragment">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/result_view_bg_rec"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/closeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yourBmiTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:text="Your BMI : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/yourBmiResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:text="22.5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#519234"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/yourBmiTxt"
+        app:layout_constraintStart_toStartOf="@+id/yourBmiTxt"
+        app:layout_constraintTop_toBottomOf="@+id/yourBmiTxt" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="10dp"
+        android:src="@drawable/redreadingimage"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+<!--    <View-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="#7D7D7D"-->
+<!--        android:elevation="10dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imageView2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/imageView2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView2" />-->
+
+    <TextView
+        android:id="@+id/weightResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:text="65 kg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#519234"
+        app:layout_constraintEnd_toStartOf="@id/heightResultTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourBmiResultTxt" />
+
+    <TextView
+        android:id="@+id/heightResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:text="170 cm"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#519234"
+        app:layout_constraintEnd_toStartOf="@id/ageResultTextView"
+        app:layout_constraintStart_toEndOf="@+id/weightResultTextView"
+        app:layout_constraintTop_toTopOf="@+id/weightResultTextView" />
+
+    <TextView
+        android:id="@+id/ageResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:text="26"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#519234"
+        app:layout_constraintEnd_toStartOf="@id/genderresultTextView"
+        app:layout_constraintStart_toEndOf="@+id/heightResultTextView"
+        app:layout_constraintTop_toTopOf="@+id/heightResultTextView" />
+
+    <TextView
+        android:id="@+id/genderresultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:text="male"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#519234"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ageResultTextView"
+        app:layout_constraintTop_toTopOf="@+id/ageResultTextView" />
+
+    <TextView
+        android:id="@+id/weightResultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        android:text="Weight"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/weightResultTextView"
+        app:layout_constraintStart_toStartOf="@+id/weightResultTextView"
+        app:layout_constraintTop_toBottomOf="@+id/weightResultTextView" />
+
+    <TextView
+        android:id="@+id/heightResultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:text="Height"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/ageResultTextView"
+        app:layout_constraintStart_toEndOf="@+id/weightResultTextView"
+        app:layout_constraintTop_toTopOf="@+id/weightResultsText" />
+
+    <TextView
+        android:id="@+id/ageResultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:text="Age"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/genderresultTextView"
+        app:layout_constraintStart_toEndOf="@+id/heightResultTextView"
+        app:layout_constraintTop_toTopOf="@+id/heightResultsText" />
+
+    <TextView
+        android:id="@+id/genderResultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:text="Gender"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ageResultTextView"
+        app:layout_constraintTop_toTopOf="@+id/ageResultsText" />
+
+    <TextView
+        android:id="@+id/healthyWeightText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="Healthy weight for the height : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/genderResultsText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/weightResultsText"
+        app:layout_constraintTop_toBottomOf="@+id/heightResultsText" />
+
+    <TextView
+        android:id="@+id/healthyWeightResultTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="53.3 kg - 72.3 kg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#519234"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/genderResultsText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/weightResultsText"
+        app:layout_constraintTop_toBottomOf="@+id/healthyWeightText" />
+
+    <TextView
+        android:id="@+id/bmiReportText"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="BMI Report :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/healthyWeightText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/healthyWeightText"
+        app:layout_constraintTop_toBottomOf="@+id/healthyWeightResultTextView" />
+
+    <TextView
+        android:id="@+id/bmiRanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        android:text="Underweight"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#519234"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bmiReportText"
+        app:layout_constraintStart_toStartOf="@+id/bmiReportText"
+        app:layout_constraintTop_toBottomOf="@+id/bmiReportText" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#65B741"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:text="Close"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
