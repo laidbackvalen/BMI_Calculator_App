@@ -86,7 +86,7 @@
             android:backgroundTint="@color/white"
             android:inputType="none"
             android:popupBackground="@color/white"
-            android:text="Lbs/Cms"
+            android:text="lbs - cm"
             android:textColor="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -127,7 +127,7 @@
         android:background="#00000000"
         android:elevation="10dp"
         android:gravity="center"
-        android:inputType="phone"
+        android:inputType="numberDecimal"
         android:maxLength="3"
         android:minWidth="30dp"
         android:text="135"
@@ -196,7 +196,7 @@
         android:layout_marginTop="10dp"
         android:background="#00000000"
         android:gravity="center"
-        android:inputType="phone"
+        android:inputType="number"
         android:maxLength="3"
         android:minWidth="30dp"
         android:text="26"

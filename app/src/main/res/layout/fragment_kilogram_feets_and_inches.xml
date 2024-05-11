@@ -87,11 +87,10 @@
             android:backgroundTint="@color/white"
             android:inputType="none"
             android:popupBackground="@color/white"
-            android:text="Kgs/Feet"
+            android:text="kg - ft"
             android:textColor="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <View
         android:id="@+id/viewKgs"
@@ -128,7 +127,7 @@
         android:background="#00000000"
         android:elevation="10dp"
         android:gravity="center"
-        android:inputType="phone"
+        android:inputType="numberDecimal"
         android:maxLength="3"
         android:minWidth="30dp"
         android:text="65"
@@ -197,7 +196,7 @@
         android:layout_marginTop="10dp"
         android:background="#00000000"
         android:gravity="center"
-        android:inputType="phone"
+        android:inputType="number"
         android:maxLength="3"
         android:minWidth="30dp"
         android:text="26"
@@ -271,7 +270,7 @@
         android:background="#00000000"
         android:elevation="10dp"
         android:gravity="center"
-        android:inputType="phone"
+        android:inputType="number"
         android:maxLength="1"
         android:minWidth="30dp"
         android:text="5"
@@ -338,7 +337,7 @@
         android:layout_marginTop="10dp"
         android:background="#00000000"
         android:gravity="center"
-        android:inputType="phone"
+        android:inputType="number"
         android:maxLength="2"
         android:minWidth="30dp"
         android:text="11"

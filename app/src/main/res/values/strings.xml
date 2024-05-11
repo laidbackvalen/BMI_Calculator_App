@@ -4,9 +4,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="mesauringTypes">
-        <item>Kgs/Feet</item>
-        <item>Lbs/Cms</item>
-        <item>Kgs/Cms</item>
+        <item>kg - ft</item>
+        <item>lbs - cm</item>
+        <item>kg - cm</item>
     </string-array>
 
 

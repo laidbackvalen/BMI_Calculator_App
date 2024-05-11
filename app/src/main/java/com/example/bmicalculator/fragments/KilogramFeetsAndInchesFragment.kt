@@ -40,7 +40,7 @@ class KilogramFeetsAndInchesFragment : Fragment() {
 
         kilogramfeetBinding.autoCompleteTextView.setOnItemClickListener { adapterView, view, i, l ->
             var selectedItem = adapterView.getItemAtPosition(i).toString()
-            if (selectedItem == "Lbs/Cms") {
+            if (selectedItem == "lbs - cm") {
                 (activity as MainActivity).setFragment(PoundsAndCentimetersFragment())
                 if (gender != null) {
                     (activity as MainActivity).sendGenderToRequiredFragment(
@@ -48,7 +48,7 @@ class KilogramFeetsAndInchesFragment : Fragment() {
                         PoundsAndCentimetersFragment()
                     )
                 }
-            } else if (selectedItem == "Kgs/Cms") {
+            } else if (selectedItem == "kg - cm") {
                 (activity as MainActivity).setFragment(AddValuesFragment())
                 if (gender != null) {
                     (activity as MainActivity).sendGenderToRequiredFragment(
@@ -213,35 +213,40 @@ class KilogramFeetsAndInchesFragment : Fragment() {
 //        passing the data to Result Fragment
 //        calculate the bmi using bmiCalculator function
 //        passing the data to Result Fragment
-        kilogramfeetBinding.calculateButton.setOnClickListener {
-            (activity as MainActivity).setFragment(ResultsFragment())
-            if (gender != null) {//check if gender is not null
-                val bmiCalc = bmiCalculator(assumeWeight, height)//calculate the bmi
-                val bmi = String.format("%.1f", bmiCalc) //format the bmi to 1 decimal place
 
-                if (bmi >= 40.toString()) {
-                    bmiRanges = "Severely obese"
-                } else if (bmi >= 30.toString() && bmi < 40.toString()) {
-                    bmiRanges = "Obesity"
-                } else if (bmi >= 25.toString() && bmi < 30.toString()) {
-                    bmiRanges = "Overweight"
-                } else if (bmi >= 18.5.toString() && bmi < 25.toString()) {
-                    bmiRanges = "Healthy weight"
-                } else {
-                    bmiRanges = "underweight"
+//         kilogramfeetBinding.viewInches.background = resources.getDrawable(R.drawable.error_red_view_bg)
+
+            kilogramfeetBinding.calculateButton.setOnClickListener {
+                (activity as MainActivity).setFragment(ResultsFragment())
+                if (gender != null) {//check if gender is not null
+                    val bmiCalc = bmiCalculator(assumeWeight, height)//calculate the bmi
+                    val bmi = String.format("%.1f", bmiCalc) //format the bmi to 1 decimal place
+
+                    if (bmi >= 40.toString()) {
+                        bmiRanges = "Severely obese"
+                    } else if (bmi >= 30.toString() && bmi < 40.toString()) {
+                        bmiRanges = "Obesity"
+                    } else if (bmi >= 25.toString() && bmi < 30.toString()) {
+                        bmiRanges = "Overweight"
+                    } else if (bmi >= 18.5.toString() && bmi < 25.toString()) {
+                        bmiRanges = "Healthy weight"
+                    } else {
+                        bmiRanges = "underweight"
+                    }
+                    (activity as MainActivity).sendDataToResultsFragment(
+                        gender,
+                        metersToCms(height).roundToInt().toString(),
+                        assumeWeight.toString(),
+                        assumeAge.toString(),
+                        bmi, bmiRanges, healthyWeightAsHeight(metersToCms(height), gender)
+                    )
                 }
-                (activity as MainActivity).sendDataToResultsFragment(
-                    gender,
-                    metersToCms(height).roundToInt().toString(),
-                    assumeWeight.toString(),
-                    assumeAge.toString(),
-                    bmi, bmiRanges, healthyWeightAsHeight(metersToCms(height), gender)
-                )
             }
-        }
         return kilogramfeetBinding.root
 
     }
+
+
 
     fun metersToCms(meters : Double): Double {
         return meters*100

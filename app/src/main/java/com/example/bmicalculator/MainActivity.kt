@@ -86,6 +86,7 @@ class MainActivity : AppCompatActivity() {
             .setCancelable(false)
             .setPositiveButton("Yes") { dialog, which ->
                 super.onBackPressed()
+                finish()
             }
             .setNegativeButton("No") { dialog, which ->
                 dialog.dismiss()

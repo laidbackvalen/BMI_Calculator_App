@@ -43,7 +43,7 @@ class PoundsAndCentimetersFragment : Fragment() {
 
         poundCentimetersBinding.autoCompleteTextView.setOnItemClickListener { adapterView, view, i, l ->
             var selectedItem = adapterView.getItemAtPosition(i).toString()
-            if (selectedItem == "Kgs/Cms") {
+            if (selectedItem == "kg - cm") {
                 (activity as MainActivity).setFragment(AddValuesFragment())
                 if (gender != null) {
                     (activity as MainActivity).sendGenderToRequiredFragment(
@@ -51,7 +51,7 @@ class PoundsAndCentimetersFragment : Fragment() {
                         AddValuesFragment()
                     )
                 }
-            } else if (selectedItem == "Kgs/Feet") {
+            } else if (selectedItem == "kg - ft") {
                 (activity as MainActivity).setFragment(KilogramFeetsAndInchesFragment())
                 if (gender != null) {
                     (activity as MainActivity).sendGenderToRequiredFragment(

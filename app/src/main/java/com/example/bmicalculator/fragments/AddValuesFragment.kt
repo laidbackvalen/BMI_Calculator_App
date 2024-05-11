@@ -70,14 +70,14 @@ class AddValuesFragment : Fragment() {
         //CHANGING FRAGMENT ACCORDING TO MEASUREMENT UNIT PASSED BY THE USER
      addValuesBinding.autoCompleteTextView.setOnItemClickListener { adapterView, view, i, l ->
          selectedItem = adapterView.getItemAtPosition(i).toString()
-        if (selectedItem == "Lbs/Cms") {
+        if (selectedItem == "lbs - cm") {
             (activity as MainActivity).setFragment(PoundsAndCentimetersFragment())
             if (gender != null) {
                 //SENDING GENDER TO REQUIRED FRAGMENT
                 (activity as MainActivity).sendGenderToRequiredFragment(gender, PoundsAndCentimetersFragment()) // THIS FUNCTION IS DECLARE IN MAIN ACTIVITY
             }
         }
-         else if(selectedItem=="Kgs/Feet"){
+         else if(selectedItem=="kg - ft"){
             (activity as MainActivity).setFragment(KilogramFeetsAndInchesFragment())
             if (gender != null) {
                 (activity as MainActivity).sendGenderToRequiredFragment(gender, KilogramFeetsAndInchesFragment())
