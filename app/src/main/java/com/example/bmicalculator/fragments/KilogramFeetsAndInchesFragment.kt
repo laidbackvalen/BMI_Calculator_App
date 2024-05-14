@@ -1,5 +1,6 @@
 package com.example.bmicalculator.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -26,6 +27,7 @@ class KilogramFeetsAndInchesFragment : Fragment() {
     lateinit var healthyWeight: String
     lateinit var selectedItem: String
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -222,13 +224,13 @@ class KilogramFeetsAndInchesFragment : Fragment() {
                     val bmiCalc = bmiCalculator(assumeWeight, height)//calculate the bmi
                     val bmi = String.format("%.1f", bmiCalc) //format the bmi to 1 decimal place
 
-                    if (bmi >= 40.toString()) {
+                    if (bmiCalc.toInt() >= 40) {
                         bmiRanges = "Severely obese"
-                    } else if (bmi >= 30.toString() && bmi < 40.toString()) {
+                    } else if (bmiCalc.toInt() in 30..39) {
                         bmiRanges = "Obesity"
-                    } else if (bmi >= 25.toString() && bmi < 30.toString()) {
+                    } else if (bmiCalc.toInt() in 25..29) {
                         bmiRanges = "Overweight"
-                    } else if (bmi >= 18.5.toString() && bmi < 25.toString()) {
+                    } else if (bmiCalc.toInt() > 18.5 && bmiCalc.toInt() < 25) {
                         bmiRanges = "Healthy weight"
                     } else {
                         bmiRanges = "underweight"

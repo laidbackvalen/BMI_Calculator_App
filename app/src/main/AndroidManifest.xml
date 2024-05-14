@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.BMICalculator"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".SplashScreen"-->
-<!--            android:exported="false" />-->
         <activity
             android:name=".MainActivity"
             android:exported="true">

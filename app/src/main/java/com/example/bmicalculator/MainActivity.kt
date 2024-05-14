@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                 dialog.dismiss()
                 Toast.makeText(
                     this,
-                    "Select buttons and icons to navigate through the App.",
+                    "Select buttons and icons to navigate through App.",
                     Toast.LENGTH_SHORT
                 ).show()
             }
