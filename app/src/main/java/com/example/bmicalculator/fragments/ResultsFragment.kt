@@ -3,18 +3,13 @@ package com.example.bmicalculator.fragments
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
-import android.provider.CalendarContract.Colors
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
-import com.example.bmicalculator.MainActivity
+import com.example.bmicalculator.activities.MainActivity
 import com.example.bmicalculator.R
-import com.example.bmicalculator.databinding.FragmentAddValuesBinding
 import com.example.bmicalculator.databinding.FragmentResultsBinding
-import java.text.DecimalFormat
 
 
 class ResultsFragment : Fragment() {

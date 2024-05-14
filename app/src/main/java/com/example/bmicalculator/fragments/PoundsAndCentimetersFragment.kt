@@ -8,11 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
 import android.widget.SeekBar
-import android.widget.TextView
-import android.widget.Toast
-import com.example.bmicalculator.MainActivity
+import com.example.bmicalculator.activities.MainActivity
 import com.example.bmicalculator.R
 import com.example.bmicalculator.databinding.FragmentPoundsAndCentimetersBinding
 import kotlin.math.roundToInt
@@ -103,14 +100,14 @@ class PoundsAndCentimetersFragment : Fragment() {
 
         //add and remove weight using imageview on click listener
         poundCentimetersBinding.addWeightInLBSByOneImage.setOnClickListener {
-            assumeWeight += 1;
+            assumeWeight ++;
             val na = assumeWeight.toString()
             poundCentimetersBinding.weightCountInLBSTextAddValues.setText(assumeWeight.toString())
 //            Toast.makeText(activity, "" + na, Toast.LENGTH_SHORT).show()
         }
         poundCentimetersBinding.removeWeightInLBSByOneImage.setOnClickListener {
             if (assumeWeight > 0) {
-                assumeWeight -= 1;
+                assumeWeight --
                 poundCentimetersBinding.weightCountInLBSTextAddValues.setText(assumeWeight.toString())
             }
         }
@@ -135,12 +132,12 @@ class PoundsAndCentimetersFragment : Fragment() {
         })
         //add and remove age using Imageiew on click
         poundCentimetersBinding.addAgeimageView.setOnClickListener {
-            assumeAge += 1;
+            assumeAge ++
             poundCentimetersBinding.ageCounttextView.setText(assumeAge.toString())
         }
         poundCentimetersBinding.removeAgeimageView.setOnClickListener {
             if (assumeAge > 0) {
-                assumeAge -= 1;
+                assumeAge --
                 poundCentimetersBinding.ageCounttextView.setText(assumeAge.toString())
             }
         }

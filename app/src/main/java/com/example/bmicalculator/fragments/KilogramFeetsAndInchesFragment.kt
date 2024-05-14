@@ -9,9 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.Toast
-import com.example.bmicalculator.MainActivity
+import com.example.bmicalculator.activities.MainActivity
 import com.example.bmicalculator.R
 import com.example.bmicalculator.databinding.FragmentKilogramFeetsAndInchesBinding
 import kotlin.math.roundToInt
@@ -25,7 +23,6 @@ class KilogramFeetsAndInchesFragment : Fragment() {
     var assumeHeightInches: Int = 11 // default height
     lateinit var bmiRanges: String
     lateinit var healthyWeight: String
-    lateinit var selectedItem: String
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreateView(
@@ -85,10 +82,8 @@ class KilogramFeetsAndInchesFragment : Fragment() {
             TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
-
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
-
             override fun afterTextChanged(p0: Editable?) {
                 //get the text from EditText and convert it to int
                 val weightString = p0.toString()
@@ -103,12 +98,12 @@ class KilogramFeetsAndInchesFragment : Fragment() {
 
         //add and remove weight using imageview on click listener
         kilogramfeetBinding.addWeightInKgsByOneImage.setOnClickListener {
-            assumeWeight += 1;
+            assumeWeight ++
             kilogramfeetBinding.weightCountInKgsTextAddValues.setText(assumeWeight.toString())
         }
         kilogramfeetBinding.removeWeightInKgsByOneImage.setOnClickListener {
             if (assumeWeight > 0) {
-                assumeWeight -= 1;
+                assumeWeight --
                 kilogramfeetBinding.weightCountInKgsTextAddValues.setText(assumeWeight.toString())
             }
         }
@@ -117,10 +112,8 @@ class KilogramFeetsAndInchesFragment : Fragment() {
         kilogramfeetBinding.ageCountTextViewKgFeet.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
-
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
-
             override fun afterTextChanged(p0: Editable?) {
                 val ageString = p0.toString()
                 try {
@@ -133,12 +126,12 @@ class KilogramFeetsAndInchesFragment : Fragment() {
         })
         //add and remove age using Imageiew on click
         kilogramfeetBinding.addAgeimageView.setOnClickListener {
-            assumeAge += 1;
+            assumeAge ++
             kilogramfeetBinding.ageCountTextViewKgFeet.setText(assumeAge.toString())
         }
         kilogramfeetBinding.removeAgeImageViewKgFeet.setOnClickListener {
             if (assumeAge > 0) {
-                assumeAge -= 1;
+                assumeAge --
                 kilogramfeetBinding.ageCountTextViewKgFeet.setText(assumeAge.toString())
             }
         }
@@ -164,13 +157,13 @@ class KilogramFeetsAndInchesFragment : Fragment() {
         //add and remove age using Imageiew on click
         kilogramfeetBinding.addFeetByOneImage.setOnClickListener {
             if (assumeHeightFeet <9) {
-                    assumeHeightFeet += 1;
+                    assumeHeightFeet ++
                     kilogramfeetBinding.feetCountTextAddValues.setText(assumeHeightFeet.toString())
             }
         }
         kilogramfeetBinding.removeFeetByOneImage.setOnClickListener {
             if (assumeHeightFeet > 0) {
-                assumeHeightFeet -= 1;
+                assumeHeightFeet --
                 kilogramfeetBinding.feetCountTextAddValues.setText(assumeHeightFeet.toString())
             }
         }
@@ -196,13 +189,13 @@ class KilogramFeetsAndInchesFragment : Fragment() {
 
         kilogramfeetBinding.addInchesimageView.setOnClickListener {
             if (assumeHeightInches <11) {
-                assumeHeightInches += 1;
+                assumeHeightInches ++
                 kilogramfeetBinding.inchesCountTextView.setText(assumeHeightInches.toString())
             }
         }
         kilogramfeetBinding.removeInchesimageView.setOnClickListener {
             if (assumeHeightInches > 0) {
-                assumeHeightInches -= 1;
+                assumeHeightInches --
                 kilogramfeetBinding.inchesCountTextView.setText(assumeHeightInches.toString())
             }
         }
@@ -247,8 +240,6 @@ class KilogramFeetsAndInchesFragment : Fragment() {
         return kilogramfeetBinding.root
 
     }
-
-
 
     fun metersToCms(meters : Double): Double {
         return meters*100

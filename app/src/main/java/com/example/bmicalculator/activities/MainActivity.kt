@@ -1,4 +1,4 @@
-package com.example.bmicalculator
+package com.example.bmicalculator.activities
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.bmicalculator.R
 import com.example.bmicalculator.databinding.ActivityMainBinding
 import com.example.bmicalculator.fragments.AddValuesFragment
 import com.example.bmicalculator.fragments.ResultsFragment

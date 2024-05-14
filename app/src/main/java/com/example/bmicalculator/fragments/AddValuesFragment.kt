@@ -8,11 +8,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
-import com.example.bmicalculator.MainActivity
+import com.example.bmicalculator.activities.MainActivity
 import com.example.bmicalculator.R
 import com.example.bmicalculator.databinding.FragmentAddValuesBinding
 import kotlin.math.roundToInt
@@ -106,14 +105,14 @@ class AddValuesFragment : Fragment() {
 
         //add and remove weight using imageview on click listener
         addValuesBinding.addWeightByOneImage.setOnClickListener {
-            assumeWeight += 1;
+            assumeWeight ++
             val na = assumeWeight.toString()
             addValuesBinding.weightCountTextAddValues.setText(assumeWeight.toString())
 //            Toast.makeText(activity, "" + na, Toast.LENGTH_SHORT).show()
         }
         addValuesBinding.removeWeightByOneImage.setOnClickListener {
             if (assumeWeight > 0) {
-                assumeWeight -= 1;
+                assumeWeight --
                 addValuesBinding.weightCountTextAddValues.setText(assumeWeight.toString())
             }
         }
@@ -138,12 +137,12 @@ class AddValuesFragment : Fragment() {
         })
         //add and remove age using Imageiew on click
         addValuesBinding.addAgeimageView.setOnClickListener {
-            assumeAge += 1;
+            assumeAge ++
             addValuesBinding.ageCounttextView.setText(assumeAge.toString())
         }
         addValuesBinding.removeAgeimageView.setOnClickListener {
             if (assumeAge > 0) {
-                assumeAge -= 1;
+                assumeAge --
                 addValuesBinding.ageCounttextView.setText(assumeAge.toString())
             }
         }
