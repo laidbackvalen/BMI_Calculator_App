@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.bmicalculator"
+    namespace = "com.valenpatel.bmicalculator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.bmicalculator"
+        applicationId = "com.valenpatel.bmicalculator"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 6
+        versionName = "1.6.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
